@@ -1,0 +1,93 @@
+/* --- top right bottom left --- */
+
+* {
+	font-family: verdana, sans-serif;
+	font-size  : 15px;
+}
+
+h1 {
+	font-size: 25px;
+}
+
+/* --- menu bar --- */
+
+#menuBar {
+	/* --- set width to number of ul li * width of ul li --- */
+	margin-left : auto;
+	margin-right: auto;
+	width       : 300px;
+}
+
+#menuBar ul {
+	list-style: none;
+	margin:     0;
+	padding:    0;
+}
+
+#menuBar ul li {
+	background-color: green;
+	float           : left;
+	height          : 30px;
+	line-height     : 30px;
+	text-align      : center;
+	width           : 150px;
+}
+
+#menuBar ul li:hover {
+	background-color: yellow;
+}
+
+#menuBar ul li:hover a {
+	color: green;
+}
+
+#menuBar ul li:hover li {
+	background-color: yellow;
+}
+
+#menuBar ul li:hover ul {
+	visibility: visible;
+}
+
+#menuBar ul li a {
+	color          : white;
+	text-decoration: none;
+}
+
+#menuBar ul li ul {
+	position  : relative;
+	visibility: hidden;
+}
+
+#menuBar ul li ul li:hover {
+	background-color: green;
+}
+
+#menuBar ul li ul li:hover a {
+	color: white;
+}
+
+#menuLeftEnd {
+	border-bottom-left-radius: 5px;
+	border-top-left-radius   : 5px;
+}
+
+#menuLeftEnd:hover {
+	/*border-bottom-left-radius: 0px;*/
+}
+
+#menuRightEnd {
+	border-bottom-right-radius: 5px;
+	border-top-right-radius   : 5px;
+}
+
+#menuRightEnd:hover {
+	/*border-bottom-right-radius: 0px;*/
+}
+
+.subMenuEnd{
+	border-bottom-left-radius : 5px;
+	border-bottom-right-radius: 5px;
+}
+
+/* --- end menu bar --- */
