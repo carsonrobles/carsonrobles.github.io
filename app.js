@@ -1,14 +1,30 @@
-var main = function() {
-	$('.main-body').click(function() {
-		//alert('body clicked');
+var menu_exposed = false;
 
-		$('.menu').animate({left: '0px'}, 300);
-		$('body').animate({left:'285px'}, 300);
+var move_menu = function(state) {
+	if (state === false) {
+		$('.menu').animate({left:'0px'}, 200);
+		$('body').animate({left:'285px'}, 200);
+		//$('.main-content').animate({opacity:'0.5'}, 200);
+	} else {
+		$('.menu').animate({left: '-285px'}, 200);
+		$('body').animate({left:'0px'}, 200);
+		//$('.main-content').animate({opacity:'1.0'}, 200);
+	}
+};
+
+
+
+var main = function() {
+	$('.icon-menu').click(function() {
+		move_menu(menu_exposed);
+
+		menu_exposed = !menu_exposed;
 	});
 
 	$('.icon-close').click(function() {
-		$('.menu').animate({left: '-285px'}, 300);
-		$('body').animate({left:'0px'}, 300);
+		move_menu(menu_exposed);
+
+		menu_exposed = false;
 	});
 };
 
